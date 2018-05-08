@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Vue Calculator</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <div class="container calculator-project">
+    <div class="columns is-multiline">
+
+      <div class="column is-12-mobile is-offset-2-tablet is-8-tablet is-offset-1-desktop is-5-desktop">
+        <div class="calculator">
+          <input type="text" v-model="input" :class="{ 'error': error }" disabled="disabled">
+          <div class="buttons-grid">
+            <button v-for="btn in buttons" @click="btnAction" v-text="btn"></button>
+          </div>
+        </div> <!-- end calculator -->
+      </div> <!-- end column -->
+
+      <div class="column is-offset-1-mobile is-10-mobile is-offset-2-tablet is-8-tablet is-offset-1-desktop is-5-desktop">
+        <div class="description">
+          <h1>Vue.Js Calculator</h1>
+          <ul>
+            <li><i class="fa fa-angle-right"></i> A basic calculator built with Vue.js</li>
+            <li><i class="fa fa-angle-right"></i> Makes calculations with JavaScript's eval function</li>
+            <li><i class="fa fa-angle-right"></i> Buttons use CSS Grid Layout</li>
+          </ul>
+        </div> <!-- end description -->
+      </div> <!-- end column -->
+
+    </div> <!-- end columns -->
+  </div> <!-- end container -->
+  
+  <script src="https://use.fontawesome.com/d3c9e0b791.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
